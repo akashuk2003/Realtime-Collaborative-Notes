@@ -34,8 +34,8 @@ Supports note creation, editing, versioning, and live typing indicators using Re
 
 ### 1️.Clone the repository
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/akashuk2003/Realtime-Collaborative-Notes.git
+cd notes_project
 
 
 Activate the virtual environment:
