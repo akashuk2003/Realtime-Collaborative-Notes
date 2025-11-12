@@ -1,0 +1,657 @@
+{
+	"info": {
+		"_postman_id": "6cae06ea-6b67-471d-ba8e-7ab43433d83c",
+		"name": "Real-Time-Note-Collaboration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40302115",
+		"_collection_link": "https://team-a-3376.postman.co/workspace/DEVELOPER_UPSKILL~8b7e445f-6a12-4936-872f-3d766858494d/collection/40302115-6cae06ea-6b67-471d-ba8e-7ab43433d83c?action=share&source=collection_link&creator=40302115"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "user1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "akash@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "user",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "user1",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "akash@123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/token/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"token",
+										""
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "user",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 12 Nov 2025 05:56:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "489"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MzAxMzM3OSwiaWF0IjoxNzYyOTI2OTc5LCJqdGkiOiI0N2M5ZDg5Zjg0NjA0YjM1YjY1YTc5MTA1YzAwMjQ2YSIsInVzZXJfaWQiOiIyIn0.L8iKQKdH2LVJbyTl7iU_xc4NZH-b8_lSo4qzWHRaHfA\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyOTI3Mjc5LCJpYXQiOjE3NjI5MjY5NzksImp0aSI6IjY0MzA4ZjhkNDAwNzQ2M2Y5ZGI0YTllNjJlZDZhNzE0IiwidXNlcl9pZCI6IjIifQ.Ir6lBleG5W-tvI4l33fdckjd8qQKGY4tj6RXtA4RKSY\"\n}"
+						}
+					]
+				},
+				{
+					"name": "REFRESH",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MzAxMzM3OSwiaWF0IjoxNzYyOTI2OTc5LCJqdGkiOiI0N2M5ZDg5Zjg0NjA0YjM1YjY1YTc5MTA1YzAwMjQ2YSIsInVzZXJfaWQiOiIyIn0.L8iKQKdH2LVJbyTl7iU_xc4NZH-b8_lSo4qzWHRaHfA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example Refresh",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "refresh",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2MzAxMzM3OSwiaWF0IjoxNzYyOTI2OTc5LCJqdGkiOiI0N2M5ZDg5Zjg0NjA0YjM1YjY1YTc5MTA1YzAwMjQ2YSIsInVzZXJfaWQiOiIyIn0.L8iKQKdH2LVJbyTl7iU_xc4NZH-b8_lSo4qzWHRaHfA",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/token/refresh/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"token",
+										"refresh",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 12 Nov 2025 05:58:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyOTI3NDA2LCJpYXQiOjE3NjI5MjcxMDYsImp0aSI6IjcwNzMyYTc2ZjZhMjQ1NTZhMGI3ZjUyNjU3NGJkNDY2IiwidXNlcl9pZCI6IjIifQ.-GuiIZc5SXyKR52deUyaT8QBvoIcvQt8a3idHVN_tl0\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "NOTES",
+			"item": [
+				{
+					"name": "CREATE NOTE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyOTMxNTMxLCJpYXQiOjE3NjI5MzEyMzEsImp0aSI6IjVlYmUxMGEzNDdmYjQ3NDE4NDE1ZWQ2NDVmNjNlZmUwIiwidXNlcl9pZCI6IjIifQ.iGorhbst-_XjkMC4ScwSplfnW3PR56fVp5nmGwoPlq0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Sample 2nd Note\",\r\n  \"content\": \"This is a 2nd test note from akash\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/notes/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example Create Note",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Sample 2nd Note\",\r\n  \"content\": \"This is a 2nd test note from akash\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/notes/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"notes",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 12 Nov 2025 07:08:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "194"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"title\": \"Sample 2nd Note\",\n    \"content\": \"This is a 2nd test note from akash\",\n    \"owner\": {\n        \"id\": 2,\n        \"username\": \"user1\"\n    },\n    \"collaborators\": [\n        2\n    ],\n    \"last_updated\": \"2025-11-12T07:08:37.185934Z\",\n    \"version\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "EDIT SPECIFIC NOTES",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyOTI3ODc4LCJpYXQiOjE3NjI5Mjc1NzgsImp0aSI6IjU5ZTg0NjhiN2Q1ODQ4MTc5YmQ2Y2MxN2YxYTc0YWQ0IiwidXNlcl9pZCI6IjIifQ.XoBoJQwWX_z2Ge4nTya4bt94aJG6Fu9WVGyWUpRogQg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Updated note\",\r\n  \"content\": \"Edited by me\",\r\n  \"last_known_version\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/notes/1/edit/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"1",
+								"edit",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example PATCH-NOTES",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Updated note\",\r\n  \"content\": \"Edited by me\",\r\n  \"last_known_version\": 2\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/notes/1/edit/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"notes",
+										"1",
+										"edit",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 12 Nov 2025 06:10:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, PATCH, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "148"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Updated note\",\n    \"content\": \"Edited by me\",\n    \"owner\": \"user1\",\n    \"collaborators\": [],\n    \"last_updated\": \"2025-11-12T06:10:50.605998Z\",\n    \"version\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "VIEW VERSION-HISTORY",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyOTI4Mjk4LCJpYXQiOjE3NjI5Mjc5OTgsImp0aSI6ImE2Y2QwODUzMWQ2MzQ0MDg4ZWY0ZjRjNTgyMzNhMzdhIiwidXNlcl9pZCI6IjIifQ.cW2zAUXJ_8jlWFi0fj1ntp3lkoatOkcyjBmCozAUojs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/notes/1/versions/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"1",
+								"versions",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example Version-History",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/notes/1/versions/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"notes",
+										"1",
+										"versions",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 12 Nov 2025 06:16:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "375"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"next\": \"http://127.0.0.1:8000/api/notes/1/versions/?page=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 3,\n            \"note\": 1,\n            \"title\": \"Updated note\",\n            \"content\": \"Edited by me\",\n            \"editor\": \"user1\",\n            \"created_at\": \"2025-11-12T06:10:50.610989Z\",\n            \"version\": 3\n        },\n        {\n            \"id\": 2,\n            \"note\": 1,\n            \"title\": \"Updated note\",\n            \"content\": \"Edited by me\",\n            \"editor\": \"user1\",\n            \"created_at\": \"2025-11-12T06:09:52.422179Z\",\n            \"version\": 2\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
